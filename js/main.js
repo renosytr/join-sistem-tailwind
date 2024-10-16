@@ -13,12 +13,33 @@ const profile = {
   address: {
     street: "Jl. Jendral Sudirman No. 10",
     city: "Jakarta",
-    country: "Indonesia"
+    country: "Indonesia",
   }
+}
+
+const avatarUser = {
+  url: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+  size: 100,
+  width: 200,
+  height: 200
 }
 
 // varriable array
 const permissions = ["admin", "user", "guest"]
+const roles = ["superuser", "administrator", "supervisor"]
+
+//  Cara menggabungkan array pertama
+permissions.forEach((permission) => {
+  // roles.push(permission) // append sebuah array
+})
+
+// Spread Operator
+const mixRoles = [...permissions, ...roles] // spread array
+const mixUser = {...profile, ...avatarUser} // spread objek
+
+// console.log("roles adalah", roles)
+// console.log("mixRoles adalah", mixRoles)
+// console.log("mixUser adalah", mixUser)
 
 // mengubah isi dari ariable
 username = "ari"
@@ -72,6 +93,22 @@ if (x == y) {
   // console.log("x tidak sama dengan y") // false condition
 }
 
+// switch (x) {
+//   case "5":
+//     console.log("x adalah 5")
+//     break;
+//   case "10":
+//     console.log("x adalah 10")
+//     break;
+//   case y:
+//     console.log("x adalah y")
+//     break;
+
+//   default:
+//     console.log("x bukan 5 dan 10")
+//     break;
+// }
+
 // function
 function calculateTriangleArea(wide, height) {
   return (wide * height) / 2
@@ -103,9 +140,9 @@ class Person { // pendefinisian objek
 }
 
 const person1 = new Person("Reno", 20, "Jakarta", "Male") // instansiasi sebuah objek
-console.log("person1 adalah", person1)
-person1.speak()
+// console.log("person1 adalah", person1)
+// person1.speak()
 
 const person2 = new Person("Ari", 25, "Jakarta", "Male")
-console.log("person2 adalah", person2)
-person2.speak()
+// console.log("person2 adalah", person2)
+// person2.speak()
